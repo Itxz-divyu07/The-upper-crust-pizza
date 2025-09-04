@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gift Cards - The Upper Crust</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<style>
+   
+   @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #e2e2e2;
+      color: #333;
+    }
+
+    .header {
+      background-color: #fff1e6;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      margin-left: 550px;
+     
+    }
+
+    .logo img {
+      height: 130px;
+      margin-right: 10px;
+      
+
+    }
+
+    .menu-icon {
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .hero {
+      background-image: url('./img/banner.jpg'); 
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+    }
+
+    .content {
+      padding: 30px 20px;
+      text-align: center;
+      background-color: #e2e2e2;
+    }
+
+    .content h1 {
+      font-size: 39px;
+      font-weight: 700;
+      margin-bottom: 5px;
+      font-family: "Roboto Condensed", sans-serif;
+    }
+
+    .content p {
+      font-size: 20px;
+      color: #555;
+      margin-bottom: 30px;
+       font-family: "Montserrat", sans-serif;
+    }
+
+    .button {
+      background-color: #EB321E;
+      color: black;
+      border: none;
+      padding: 20px;
+      margin: 10px 7px;
+      font-size: 16px;
+      font-weight: 700;
+      width: 100%;
+      max-width: 280px;
+       font-family: "Roboto Condensed", sans-serif;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #c71e1a;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 14px;
+      background-color: #ffffff;
+      padding: 20px;
+      margin-top: 30px;
+      color: #333;
+    }
+
+    .footer p {
+      margin: 5px 0;
+    }
+
+    /* Slide Menu */
+    .slide-menu {
+      margin-top: 70px;
+      position: fixed;
+      top: 0;
+      right: -300px;
+      width: 300px;
+      height: 260px;
+      background-color: #fff1e6;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0);
+      overflow: hidden;
+      transition: right 0.3s ease;
+      z-index: 3;
+      padding: 20px;
+    }
+
+    .slide-menu.open {
+      right: 0;
+    }
+
+    .close-btn {
+    
+      text-align: right;
+      font-size: 32px;
+      cursor: pointer;
+    }
+
+    .slide-menu ul {
+      list-style: none;
+      margin-top: 50px;
+    }
+
+    .slide-menu ul li {
+      padding: 15px 10px;
+      border-bottom: 1px solid #ccc;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+      .slide-menu ul li:hover{
+        background-color: #EB321E;
+        
+      }
+
+    .slide-menu ul li i {
+      width: 20px;
+    }
+
+    @media screen and (max-width:776px) {
+    .logo {
+        margin-left: 6px;
+      margin-bottom: 29px;
+    }
+    .slide-menu {
+    
+      width: 200px;
+      height: 270px;
+     
+    }
+  }
+    
+
+
+  </style>
+
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="logo">
+      <img src="./img/weblogo.png" alt="The Upper Crust Logo">
+     
+    </div>
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+  </div>
+
+  <!-- Hero Image -->
+  <div class="hero"></div>
+
+  <!-- Content -->
+  <div class="content">
+    <h1>GIFT CARDS</h1>
+    <p>Welcome to our online gift card shop!</p>
+    
+    <button class="button" onclick="alert('Redirecting to purchase page')">PURCHASE GIFT CARDS</button>
+    <button class="button" onclick="alert('Redirecting to balance check')">CHECK GIFT CARD BALANCE</button>
+    <button class="button" onclick="alert('Redirecting to order status')">VIEW ORDER STATUS</button>
+  </div>
+
+ <!-- Slide Menu -->
+  <div class="slide-menu" id="slideMenu">
+    <div class="close-btn" onclick="toggleMenu()"><i class="fas fa-times"></i></div>
+    <ul>
+      <li><i class="fas fa-search"></i> Order Status</li>
+      <li><i class="fas fa-credit-card"></i> Check Balance</li>
+      <li><i class="fas fa-universal-access"></i> Accessibility Version</li>
+    </ul>
+  </div>
+
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>Policies & Disclaimers</p>
+    <p>Powered by Card Market™</p>
+  </div>
+
+</body>
+
+<script>
+
+function toggleMenu() {
+      document.getElementById('slideMenu').classList.toggle('open');
+    }
+
+</script>
+</html>

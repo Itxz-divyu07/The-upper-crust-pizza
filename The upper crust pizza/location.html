@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Upper Crust Pizzeria</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://db.onlinewebfonts.com/c/8ea6cd010a318c58daba0e05c748a0d2?family=Joe+College+Sans+NF+W00+Rg" rel="stylesheet">
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+<style>
+
+  * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  
+  background-color: #fefcf8;
+  color: #1c1c1c;
+}
+
+header {
+  background-color: #fff;
+  padding: 20px 40px;
+}
+
+</style>
+<body>
+  <header class="navbar">
+    <div class="logo">THE UPPER CRUST</div>
+
+     <div class="hamburger" onclick="openMenu()"> <i class="fa-solid fa-bars"></i>
+     </div>
+
+    <nav class="nav-links">
+      <a href="index.html">HOME</a>
+      <a href="location.html">LOCATIONS</a>
+      <a href="catering.html">CATERING</a>
+      <a href="giftcards.html">GIFT CARDS</a>
+      <a href="rewards.html">REWARDS</a>
+    </nav>
+    <div class="order-buttons">
+     <a href="order.html"> <button class="order-btn">ORDER MASS</button></a>
+     <a href="ordercall.html"> <button class="order-btn">ORDER CALI</button></a>
+    </div>
+  </header>
+
+  <!-- Fullscreen Menu -->
+  <div class="fullscreen-menu" id="fullscreenMenu">
+    <div class="menu-header">
+      <div class="menu-logo">THE <br />UPPER <br />CRUST</div>
+      <div class="menu-close" onclick="closeMenu()">CLOSE X</div>
+    </div>
+    <ul class="menu-links">
+           <li> <a href="index.html">HOME</a></li>
+           <li> <a href="location.html">LOCATION</a></li>
+           <li><a href="catering.html"> CATERING</a></li>
+           <li><a href="giftcards.html">GIFT CARD</a></li>
+           <li><a href="rewards.html">REWARDS</a></li>
+
+           <li><a href="order.html"><span> ORDER MASS</span></a></li>
+           <li><a href="ordercall.html"><span> ORDER CALI</span></a>  </li>
+    
+    </ul>
+    <div class="menu-social">
+       <a href="https://www.tiktok.com/notfound"><i class="fab fa-tiktok"></i></a>
+       <a href="https://x.com/uppercrustpizza"><i class="fab fa-twitter"></i></a>
+       <a href="https://www.facebook.com/UpperCrustPizza"><i class="fab fa-facebook-f"></i></a>
+       <a href="https://www.instagram.com/uppercrustpizza"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+
+  <!-- location content -->
+   <section>
+      <div class="myH1">
+      <h1> OUR <span>SORT OF FAMOUS</span> <br>
+        LOCATIONS </h1>
+      </div>
+
+   </section>
+  
+    <section class="locations-content">
+      <aside class="states-list">
+        <h3>MASSACHUSETTS</h3>
+        <ul>
+          <li class="active" data-location="beacon-hill" >BEACON HILL</li>
+          <li data-location="brookline" >BROOKLINE</li>
+          <li data-location="lexington" >LEXINGTON</li>
+          <li data-location="south-end" >SOUTH END</li>
+        </ul>
+        <h3>CALIFORNIA</h3>
+        <ul>
+          <li data-location="beverly-hills" >BEVERLY HILLS</li>
+        </ul>
+      </aside>
+
+      <div class="location-details">
+
+        <!-- 1 -->
+
+        <div class="location" data-location="beacon-hill" >
+          <iframe
+            src="https://www.google.com/maps?q=20+Charles+St,+Boston,+MA+02114&output=embed"
+            loading="lazy"
+            allowfullscreen
+          ></iframe>
+          <div class="info">
+            <h2>BEACON HILL</h2>
+            <p>We are on 20 Charles Street, Boston, MA 02114</p>
+            <p><strong>HOURS:</strong>
+              Sunday - Wednesday 11 AM - 10 PM<br />
+              Thursday 11 AM - 11 PM<br />
+              Friday - Saturday 11 AM - 2 AM</p>
+            <p>Contact us at 617-723-9600</p>
+            <button class="order-btn">ORDER NOW</button>
+          </div>
+        </div>
+
+        <!-- 2 -->
+
+        <div class="location" data-location="brookline" >
+          <iframe
+            src="https://www.google.com/maps?q=286+Harvard+St,+Brookline,+MA+02446&output=embed"
+            loading="lazy"
+            allowfullscreen
+          ></iframe>
+          <div class="info">
+            <h2>BROOKLINE</h2>
+            <p>We are on 286 Harvard Street, Brookline, MA 02446</p>
+            <p><strong>HOURS:</strong>
+              Sunday - Thursday 11 AM - 10 PM<br />
+              Friday - Saturday 11 AM - 11 PM</p>
+            <p>Contact us at 617-734-4900</p>
+            <button class="order-btn">ORDER NOW</button>
+          </div>
+        </div>
+
+        <!-- 3 -->
+
+         <div class="location" data-location="lexington" >
+          <iframe
+            src=" https://www.google.com/maps?q=41+Waltham+St,+Lexington,+MA+02421&output=embed"
+            loading="lazy"
+            allowfullscreen
+          ></iframe>
+          <div class="info">
+            <h2>LEXINGTON</h2>
+            <p>We are on 41 Waltham Street, Lexington, MA 02421</p>
+            <p><strong>HOURS:</strong>
+              Sunday - Thursday 11 AM - 10 PM<br />
+              Friday - Saturday 11 AM - 11 PM</p>
+            <p>Contact us at 781-274-0089</p>
+            <button class="order-btn">ORDER NOW</button>
+          </div>
+        </div>
+
+        <!-- 4 -->
+         
+         <div class="location" data-location="south-end" >
+          <iframe
+            src="https://www.google.com/maps?q=683+Tremont+St,+Boston,+MA+02118&output=embed"
+            loading="lazy"
+            allowfullscreen
+          ></iframe>
+          <div class="info">
+            <h2>SOUTH END</h2>
+            <p>We are on 683 Tremont Street, Boston, MA 02118</p>
+            <p><strong>HOURS:</strong> 
+              Sunday - Thursday 11 AM - 10 PM<br />
+              Friday - Saturday 11 AM - 11 PM</p>
+            <p>Contact us at 617-927-0090</p>
+            <button class="order-btn">ORDER NOW</button>
+          </div>
+        </div>
+
+        <!-- 5 -->
+
+         <div class="location" data-location="beverly-hills" >
+          <iframe
+            src="https://www.google.com/maps?q=243+S+Beverly+Dr,+Beverly+Hills,+CA+90212&output=embed"
+            loading="lazy"
+            allowfullscreen
+          ></iframe>
+          <div class="info">
+            <h2>BEVERLY HILLS</h2>
+            <p>We are on 243 South Beverly Street, Beverly Hills, CA 90212</p>
+            <p><strong>HOURS:</strong>
+              Sunday - Thursday 11 AM - 10 PM<br />
+              Friday - Saturday 11 AM - 11 PM</p>
+            <p>Contact us at 310-504-5056</p>
+            <button class="order-btn">ORDER NOW</button>
+          </div>
+        </div>
+
+    
+      <!-- end -->
+
+      </div>
+    </section>
+  
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <h3 class="footer-logo"><span style="font-size: 20px; font-weight: 500; margin-left: 27px;">THE</span><br>UPPER<br>CRUST</h3>
+     <br>
+      <p class="footer-email">HELLO@THEUPPERCRUST.PIZZA</p>
+      <p class="footer-copy" >Copyright © The Upper Crust 2025 All Rights Reserved</p>
+    </div>
+    <div class="footer-right">
+      <div class="footer-links">
+        <a href="order.html">OUR MENU</a>
+        <a href="catering.html">CATERING</a>
+        <a href="apply.html">CAREERS</a>
+        <a href="location.html">LOCATIONS</a>
+        <a href="giftcards.html">GIFT CARDS</a>
+        <a href="rewards.html">REWARDS</a>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.tiktok.com/notfound">TIKTOK</a>
+        <a href="https://x.com/uppercrustpizza">TWITTER</a>
+        <a href="https://www.facebook.com/UpperCrustPizza">FACEBOOK</a>
+        <a href="https://www.instagram.com/uppercrustpizza/">INSTAGRAM</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-pattern">
+   
+  </div>
+  
+</footer>
+
+
+</body>
+<script >
+
+  const hamburger = document.querySelector('.hamburger');
+  const fullscreenMenu = document.querySelector('.fullscreen-menu');
+  const closeBtn = document.querySelector('.menu-close');
+
+  hamburger.addEventListener('click', () => {
+    fullscreenMenu.classList.add('show');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    fullscreenMenu.classList.remove('show');
+  });
+
+
+  const locationItems = document.querySelectorAll(".states-list li");
+  const locationBlocks = document.querySelectorAll(".location");
+
+locationItems.forEach(item => {
+  item.addEventListener("click", () => {
+    const selected = item.getAttribute("data-location");
+
+    // Remove 'active' class from all list items
+    locationItems.forEach(li => li.classList.remove("active"));
+    item.classList.add("active");
+
+    // Show only the matching location
+    locationBlocks.forEach(block => {
+      block.style.display = block.getAttribute("data-location") === selected ? "flex" : "none";
+    });
+  });
+});
+
+
+
+</script>
+</html>

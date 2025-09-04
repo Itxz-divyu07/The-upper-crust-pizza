@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Upper Crust Pizzeria</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">THE UPPER CRUST</div>
+     <div class="hamburger" onclick="openMenu()"> <i class="fa-solid fa-bars"></i>
+     </div>
+
+    <nav class="nav-links">
+      <a href="index.html">HOME</a>
+      <a href="location.html">LOCATIONS</a>
+      <a href="catering.html">CATERING</a>
+      <a href="giftcards.html">GIFT CARDS</a>
+      <a href="rewards.html">REWARDS</a>
+    </nav>
+    <div class="order-buttons">
+     <a href="order.html"> <button class="order-btn">ORDER MASS</button></a>
+     <a href="ordercall.html"> <button class="order-btn">ORDER CALI</button></a>
+    </div>
+     <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  </header>
+
+  
+ <!-- Fullscreen Menu -->
+  <div class="fullscreen-menu" id="fullscreenMenu">
+    <div class="menu-header">
+      <div class="menu-logo">THE <br />UPPER <br />CRUST</div>
+      <div class="menu-close" onclick="closeMenu()">CLOSE X</div>
+    </div>
+    <ul class="menu-links">
+           <li> <a href="index.html">HOME</a></li>
+           <li> <a href="location.html">LOCATION</a></li>
+           <li><a href="catering.html"> CATERING</a></li>
+           <li><a href="giftcards.html">GIFT CARD</a></li>
+           <li><a href="rewards.html">REWARDS</a></li>
+
+           <li><a href="order.html"><span> ORDER MASS</span></a></li>
+           <li><a href="ordercall.html"><span> ORDER CALI</span></a>  </li>
+    
+    </ul>
+    <div class="menu-social">
+       <a href="https://www.tiktok.com/notfound"><i class="fab fa-tiktok"></i></a>
+       <a href="https://x.com/uppercrustpizza"><i class="fab fa-twitter"></i></a>
+       <a href="https://www.facebook.com/UpperCrustPizza"><i class="fab fa-facebook-f"></i></a>
+       <a href="https://www.instagram.com/uppercrustpizza"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+  
+  <section class="catering-section">
+  <div class="catering-content">
+    <div class="text-column">
+        <h1>CATERING</h1>
+      <h2>Be the rock <br> star of your <br> next event!</h2>
+      <h4>Use Upper Crust Pizzeria for all the <br> catering.</h4>
+      <p>
+        Did your boss just ask you to order lunch for your <br>
+        company meeting... tomorrow? No sweat! We can handle <br>
+        most last-minute orders for parties big or small! And <br>
+        everyone likes pizza (unless they're weird), so we’re <br>
+        perfect for catering private parties, birthday parties, <br>
+        graduation parties, even weddings. Don’t worry about <br> 
+        your vegan and gluten-free friends, we can <br> 
+        accommodate them with our vegan pizza and gluten- <br> 
+        free pizza options.
+      </p>
+      <p>
+        Leave the stress to Upper Crust Pizzeria and make your <br>
+        event unforgettable, one slice at a time!
+      </p>
+      <div class="button-group">
+       <a href="starturorder.html"> <button class="outlined-button" >Start Your Order</button></a> <br>
+        <a href="/img/menu.pdf" target="_blank"> <button class="outlined-button" id="viewMenuBtn">View Menu</button> </a>
+      </div>
+    </div>
+    <div class="image-column">
+      <img src="./img/catering.jpg" alt="Catering dishes" />
+    </div>
+  </div>
+</section>
+
+<section class="marquee-catering">
+  <div class="marquee-content">
+    <span>
+        THE UPPER CRUST CATERING  THE UPPER CRUST CATERING  THE UPPER CRUST CATERING  THE UPPER CRUST CATERING
+    </span>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <h3 class="footer-logo"><span style="font-size: 20px; font-weight: 500; margin-left: 27px;">THE</span><br>UPPER<br>CRUST</h3>
+     <br>
+      <p class="footer-email">HELLO@THEUPPERCRUST.PIZZA</p>
+      <p class="footer-copy" >Copyright © The Upper Crust 2025 All Rights Reserved</p>
+    </div>
+    <div class="footer-right">
+      <div class="footer-links">
+        <a href="order.html">OUR MENU</a>
+        <a href="catering.html">CATERING</a>
+        <a href="apply.html">CAREERS</a>
+        <a href="location.html">LOCATIONS</a>
+        <a href="giftcards.html">GIFT CARDS</a>
+        <a href="rewards.html">REWARDS</a>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.tiktok.com/notfound">TIKTOK</a>
+        <a href="https://x.com/uppercrustpizza">TWITTER</a>
+        <a href="https://www.facebook.com/UpperCrustPizza">FACEBOOK</a>
+        <a href="https://www.instagram.com/uppercrustpizza/">INSTAGRAM</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-pattern">
+   
+  </div>
+  
+</footer>
+</body>
+<script>
+ 
+  window.onload = function () {
+    document.getElementById('viewMenuBtn').addEventListener('click', function () {
+      window.open('img/menu.pdf', '_blank');
+    });
+  };
+
+ const hamburger = document.querySelector('.hamburger');
+  const fullscreenMenu = document.querySelector('.fullscreen-menu');
+  const closeBtn = document.querySelector('.menu-close');
+
+  hamburger.addEventListener('click', () => {
+    fullscreenMenu.classList.add('show');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    fullscreenMenu.classList.remove('show');
+  });
+
+</script>
+</html>

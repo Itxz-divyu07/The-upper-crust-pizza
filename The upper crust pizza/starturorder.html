@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toast Catering</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
+  
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+    }
+    .sidebar {
+      width: 30%;
+      padding: 20px;
+      overflow-y: auto;
+      border-right: 1px solid #ccc;
+    }
+    .sidebar h2 {
+      margin-bottom: 10px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 500;
+    }
+    .location-card {
+      border: 1px solid #ddd;
+      box-shadow:1px 1px 1px 1px rgb(198, 193, 193);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 15px;
+      background-color: #fff;
+    }
+    .location-card h3 {
+      margin-bottom: 5px;
+      font-weight: 500;
+      font-family: Source-Sans-Pro, system-ui, -apple-system, Helvetica Neue, Arial;
+    }
+      .location-card p{
+        font-family: Source-Sans-Pro, system-ui, -apple-system, Helvetica Neue, Arial;
+        color: #605f5f;
+      
+      }
+    .location-card .status {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      margin: 5px 0;
+      
+    }
+    .status{
+      font-weight: bold;
+    }
+    .status-dot {
+      width: 10px;
+      height: 10px;
+      background-color: green;
+      border-radius: 50%;
+      margin-right: 6px;
+    }
+    .location-card button {
+      margin-right: 10px;
+      margin-bottom: 4px;
+      margin-top: 10px;
+      padding: 10px 12px;
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+    }
+    .map-container {
+      flex: 1;
+    }
+    #map {
+      width: 100%;
+      height: 100%;
+    }
+    .search-box {
+      display: flex;
+      margin-bottom: 15px;
+      
+    }
+    .search-box input {
+      flex: 1;
+      padding: 8px;
+      border: 1px solid black;
+      border-radius: 14px;
+    }
+        
+
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Our locations</h2>
+    <div class="search-box">
+      <input type="text" placeholder="Enter an address to find your closest location" />
+    </div>
+    
+    <div class="location-card">
+      <h3>Upper Crust Pizzeria</h3>
+      <p>Brookline</p>
+      <div class="status"><div class="status-dot"></div>Catering online ordering available</div>
+      <p style="font-size: 15px;">(617) 734-4900</p>
+      <button>Order pickup</button><button>Order delivery</button>
+    </div>
+    <!-- 2 -->
+     <div class="location-card">
+      <h3>Upper Crust Pizzeria</h3>
+      <p>South End</p>
+      <div class="status"><div class="status-dot"></div>Catering online ordering available</div>
+      <p style="font-size: 15px;">(617) 927-0090</p>
+      <button>Order pickup</button><button>Order delivery</button>
+    </div>
+<!-- 3 -->
+    <div class="location-card">
+      <h3>Upper Crust Pizzeria</h3>
+      <p>Beacon Hill</p>
+      <div class="status"><div class="status-dot"></div>Catering online ordering available</div>
+      <p style="font-size: 15px;">(617) 723-9600</p>
+      <button>Order pickup</button><button>Order delivery</button>
+    </div>
+   <!-- 4 -->
+    <div class="location-card">
+      <h3>Upper Crust Pizzeria</h3>
+      <p>Lexington</p>
+      <div class="status"><div class="status-dot"></div>Catering online ordering available</div>
+      <p style="font-size: 15px;">(781) 274-0089</p>
+      <button>Order pickup</button><button>Order delivery</button>
+    </div>
+   
+
+  </div>
+  <div class="map-container">
+    <div id="map"></div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    const map = L.map('map').setView([42.3601, -71.0589], 11); // Boston coordinates
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const locations = [
+      { name: "Beacon Hill", coords: [42.3588, -71.0708] },
+      { name: "South End", coords: [42.3389, -71.0723] },
+      { name: "Brookline", coords: [42.3318, -71.1212] },
+    ];
+
+    locations.forEach(loc => {
+      L.marker(loc.coords).addTo(map).bindPopup(`<b>${loc.name}</b>`);
+    });
+  </script>
+</body>
+</html>

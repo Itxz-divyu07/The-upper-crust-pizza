@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sort of Famous Rewards</title>
+  <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
+
+</head>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+     
+    }
+    .container-box{
+        margin-top: 130px;
+        box-shadow: 1px 0 9px 4px #d8d6d6;
+        max-width: 1800px;
+        margin-left: 10%;
+        margin-right: 10%;
+        position: relative;
+        
+
+    }
+
+    .logo {
+      margin-top: 10px;
+    
+    }
+
+    .logo img {
+      
+      width: 110px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      
+    }
+
+    h2 {
+      font-weight: bold;
+      margin-top: 20px;
+      font-size: 20px;
+    }
+
+    p {
+      display: flex;
+      margin: 10px 0 20px;
+      color: #333;
+      font-family: Source-Sans-Pro, system-ui, -apple-system, Helvetica Neue, Arial;
+      white-space: nowrap;
+      font-size: 17px;
+      justify-content: center;
+        }
+
+    .input-group {
+      display: flex;
+      align-items: center;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .input-group select,
+    .input-group input {
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    .input-group select {
+      width: 90px;
+      border-right: 1px solid #ccc;
+    }
+
+    .captcha-box {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      background-color: #f0eeee67;
+    }
+
+    .captcha-box input[type="checkbox"] {
+      transform: scale(1.2);
+      margin-right: 10px;
+      
+    }
+
+    .signup-btn {
+      width: 100%;
+      padding: 14px;
+      font-size: 16px;
+      background-color: #eee;
+      color: #888;
+      border: none;
+      border-radius: 8px;
+      cursor: not-allowed;
+    }
+
+    .signin-link {
+      margin-top: 30px;
+      font-weight: 500;
+      margin-bottom: 60px;
+      color: #1b47b6;
+      font-size: 19px;
+      cursor: pointer;
+      font-family: 'Source-Sans-Pro' ;
+    
+    }
+
+  .footer-text {
+      
+  max-width: 90%;
+  margin: 20px auto 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  text-align: center;
+  
+
+}
+
+.footer-text a {
+  color: #2a5bd7;
+  text-decoration: underline;
+  font-weight: normal;
+}
+
+
+    .footer-phone {
+      background-color: #eef2f8;
+      padding: 15px;
+      margin-top: 20px;
+      
+    }
+
+    .footer-phone a {
+      color: #2a5bd7;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    .footer-img{
+        margin-top: 40px;
+    }
+@media (max-width: 768px){
+   p {
+   
+      font-size: 13px;
+     
+        }
+   .container-box{
+        margin-top: 80px;
+        margin-left: 5%;
+        margin-right: 5%;     
+
+}
+
+}
+  </style>
+<body>
+   
+<div class="container-box">
+<div class="logo">
+    <img src="./img/restaurant_1705014632_90.png" alt="Upper Crust Logo">
+  </div>
+<div class="container">
+ 
+
+  <h2>Sign up for Sort of Famous Rewards</h2>
+  <p>Earn 1 point for every $1 spent and unlock $5 off every 100 points.</p>
+<br>
+
+  <label for="phone" style="display:block; text-align:left; font-weight:bold; margin-bottom:5px;"><span style="color: rgb(224, 12, 12);">* </span> Phone</label>
+  <div class="input-group">
+    <select>
+      <option value="+1"> us +1</option>
+    </select>
+    <input type="tel" id="phone" placeholder="(123) 456-7890">
+  </div>
+
+  <div class="captcha-box">
+    <label style="display: flex; align-items: center;">
+      <input type="checkbox"> I'm not a robot
+    </label>
+    <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="reCAPTCHA" height="30">
+  </div>
+
+  <button class="signup-btn" disabled>Sign up</button>
+
+  <div class="signin-link">Sign in to an existing account</div>
+
+
+  <div class="footer-text">
+    By providing your phone number, you are agreeing to participate in the 
+    rewards program and to be contacted through this phone number as <br> part of  
+    the program. Rewards program information is subject to
+   <a href="#"> Toast's Terms of Service</a> and <a href="#"> Privacy Statement.</a>
+  </div>
+
+  <div class="footer-phone">
+    <a href="tel:+16174921111">(617) 492-1111</a>
+  </div>
+</div>
+</div>
+
+<footer>
+   <div class="footer-img">
+    <img src="./img/powered-by-toast.png" alt="">
+   </div>
+   <p>
+     © 2025 Toast, inc
+   </p>
+
+</footer>
+
+</body>
+</html>

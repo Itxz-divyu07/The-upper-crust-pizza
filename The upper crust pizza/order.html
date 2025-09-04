@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upper Crust Pizzeria</title>
+ 
+
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+@import url(https://db.onlinewebfonts.com/c/8ea6cd010a318c58daba0e05c748a0d2?family=Joe+College+Sans+NF+W00+Rg);
+
+  * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+    font-family: "Winky Rough", sans-serif;
+  
+}
+
+body {
+  background-color: #fff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+
+}
+
+.logo {
+  height: 50px;
+  margin-left: 49px;
+}
+
+.user-icon {
+  height: 28px;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  height: calc(100vh - 60px);
+}
+
+.left-panel {
+  width: 35%;
+  padding: 40px 30px;
+  background-color: #fff;
+  overflow-y: auto;
+  border-right: 1px solid #eee;
+}
+
+.left-panel h1 {
+  color:#ED5744;
+  font-size: 28px;
+  margin-bottom: 20px;
+  letter-spacing: 3px;
+  line-height: 1.4em;
+  font-family: "Joe College Sans NF W00 Rg";
+}
+
+.toggle-buttons {
+  display: flex;
+  border: 2px solid #ED5744;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  width: fit-content;
+}
+
+.toggle {
+  padding: 10px 78px;
+  background: transparent;
+  border: none;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.toggle.active {
+  background-color: #e53935;
+  color: white;
+}
+
+.location-label {
+  color: #e53935;
+  font-weight: bold;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 8px 10px;
+  border-radius: 23px;
+  margin: 10px 0 15px;
+}
+
+.input-wrapper input {
+  flex: 1;
+  border: none;
+  outline: none;
+
+}
+
+.input-wrapper .icon {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.error-message {
+  color: #444;
+  font-size: 0.9em;
+  margin-bottom: 30px;
+}
+
+.error-message strong {
+  color: #e53935;
+  
+}
+
+.error-message a {
+  color: #007bff;
+  text-decoration: none;
+}
+/* mini map */
+.map img{
+  width: 100%;
+}
+
+
+
+.right-panel {
+  flex: 1;
+  height: 100%;
+}
+
+@media (max-width: 768px){
+
+.left-panel {
+  width: 100%;
+
+}
+
+}
+
+</style>
+
+<body>
+  <div class="nav">
+  <header>
+    <img src="./img/weblogo.png" alt="Upper Crust Logo" class="logo">
+    <img src="./img/user icon.png" alt="User Icon" class="user-icon">
+  </header>
+</div>
+  <main class="container">
+    <section class="left-panel">
+      <h1>WELCOME TO UPPER CRUST PIZZERIA!</h1>
+
+      <div class="toggle-buttons">
+        <button class="toggle">Delivery</button>
+        <button class="toggle active">Pickup</button>
+      </div>
+
+      <label for="location" class="location-label">Find your closest location</label>
+      <div class="input-wrapper">
+        <input type="text" id="location" placeholder="City, state or postal code">
+        <span class="icon"> </span>
+      </div>
+
+      <div class="error-message">
+        <p><strong>We couldn't locate you!</strong></p>
+       <br>
+        <p>Please enter an address or enable location access in your browser to find a nearby pickup location, or <a href="#">click here</a> to browse all locations alphabetically.</p>
+      </div>
+<!-- mini map -->
+  <div class="map">
+     <img src="./img/map.webp" alt="map">
+  </div>
+      
+      
+    </section>
+
+    <section class="right-panel">
+      <iframe
+       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2948.4655136031425!2d-71.12936298468283!3d42.33176477918864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e379c0a1f7e473%3A0x5fcf64b36e14e9a6!2sBrookline%2C%20MA%2C%20USA!5e0!3m2!1sen!2sin!4v1717573490059!5m2!1sen!2sin"
+  
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </section>
+  </main>
+
+  <script >
+
+document.querySelectorAll('.toggle').forEach(button => {
+  button.addEventListener('click', () => {
+    document.querySelectorAll('.toggle').forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+  });
+});
+
+  </script>
+</body>
+</html>

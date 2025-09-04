@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Employment Application</title>
+
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+body {
+  font-family: Inter;
+  background-color: #fff6ee;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  background-color: #ffffff;
+  max-width: 750px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.top-logo{
+
+    display: flex;
+    justify-content: center;
+}
+.logo {
+  
+  width: 110px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: #2c2c2c;
+}
+
+p {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  width: 350px;
+
+}
+
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 8px;
+}
+
+.name {
+  margin-bottom: 20px;
+}
+
+.main-label {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #333;
+  display: block;
+}
+
+.name-row {
+  display: flex;
+  gap: 20px;
+}
+
+.input-block {
+  flex: 1;
+}
+
+.input-block input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+ input:hover,
+ input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.6);
+  outline: none;
+}
+select:hover,
+select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.6);
+  outline: none;
+}
+
+.sub-label {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #666;
+}
+/* name detail end here */
+
+.availability-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 12px;
+}
+
+.availability-table th,
+.availability-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.availability-table thead {
+  background-color: #e5eaf4;
+}
+
+.day-cell {
+  background-color: #e5eaf4 ; 
+  font-weight: 500;
+  padding: 8px;
+  text-align: center;
+}
+
+
+button {
+ 
+  padding: 12px 4px;
+  background-color: #e1e0e0;
+  color: rgb(123, 118, 118);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 140px;
+  font-size: 1rem;
+}
+.btn{
+  display:flex ;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+button:hover {
+  background-color: #eaeaea;
+}
+
+.file-drop-area {
+  border: 1px dashed #ccc;
+  background-color: #f9f9ff;
+  text-align: center;
+  padding: 30px;
+  border-radius: 6px;
+  position: relative;
+  cursor: pointer;
+  transition: border-color 0.3s;
+   margin-top: 12px;
+   
+   margin-bottom: 30px;
+}
+
+.file-drop-area:hover {
+  border-color: #999;
+}
+
+.file-drop-area input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+ 
+}
+
+.file-drop-text {
+  pointer-events: none;
+}
+
+.upload-icon {
+  
+  width: 32px;
+  margin-bottom: 10px;
+  opacity: 0.6;
+}
+.resumeUpload{
+ font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .name-row {
+    flex-direction: column;
+  }
+}
+
+
+
+</style>
+<body>
+    <div class="top-logo">
+  <img src="./img/weblogo.png" alt="The Upper Crust Logo" class="logo" />
+    </div>
+  <div class="container">
+    <div class="form-header">
+
+      <h1>Employment Application</h1>
+      <p>Please complete and submit application to be considered.</p>
+    </div>
+    
+    <hr>
+  <br>
+  <br>
+    <form id="applicationForm">
+      
+       <div class="name">
+  <label class="main-label">Name</label>
+  <br>
+  <div class="name-row">
+    <div class="input-block">
+      <input type="text" name="firstName" required>
+      <label class="sub-label">First Name</label>
+    </div>
+    <div class="input-block">
+      <input type="text" name="lastName" required>
+      <label class="sub-label">Last Name</label>
+    </div>
+  </div>
+</div>
+
+
+<!-- name detail end -->
+      <div class="form-group">
+        <label>Email</label>
+        <br>
+        <input type="email" name="email" required placeholder="" />
+      <p>example@example.com</p>
+      </div>
+
+      <div class="form-group">
+        <label>Phone Number</label> <br>
+        <input type="tel" name="phone" placeholder="(000) 000-0000" required />
+        <p>please enter a valid phone number</p>
+      </div>
+
+      <div class="form-group">
+        <label>Current City</label> <br>
+        <input type="text" name="city" />
+      </div>
+
+      <div class="form-group">
+        <label>Current State</label> <br>
+        <input type="text" name="state" />
+      </div>
+
+      <div class="form-group">
+        <p>Are you looking for full-time or part-time work?</p>
+        <label><input type="checkbox" name="availability" value="Full-Time" /> Full-Time</label>
+        <label><input type="checkbox" name="availability" value="Part-Time" /> Part-Time</label>
+      </div>
+
+      <div class="form-group">
+        <label>Position Preference</label> <br>
+        <select name="position" required>
+          <option value="">Please Select</option>
+          <option value="Cook">Cook</option>
+          <option value="Driver">Driver</option>
+          <option value="Cashier">Cashier</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Preferred Work Location</label> <br>
+        <select name="location">
+          <option value="">Please Select</option>
+          <option value="Downtown">Downtown</option>
+          <option value="Uptown">Uptown</option>
+        </select>
+      </div>
+
+       <div>
+        <label style="font-weight: 600;">Availability</label> <br>
+        <table class="availability-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Daytime</th>
+              <th>Evenings</th>
+              <th>Anytime</th>
+            </tr>
+          </thead>
+          <tbody>
+            <script>
+              const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+              document.write(
+                days.map(day => `
+                  <tr>
+                    <td class="day-cell">${day}</td>
+                    <td><input type="radio" name="${day}" value="Daytime" /></td>
+                    <td><input type="radio" name="${day}" value="Evenings" /></td>
+                    <td><input type="radio" name="${day}" value="Anytime" /></td>
+                  </tr>
+                `).join('')
+              );
+            </script>
+          </tbody>
+        </table>
+    </div>
+
+      <div class="form-group">
+        <label>Preferred Method of Transport</label> <br>
+        <input type="text" name="transport" placeholder="" />
+      <p>How will you be travelling to and from work?</p>
+      </div>
+
+      <div class="form-group">
+        <label>Referred by</label> <br>
+        <input type="text" name="referredBy" />
+      </div>
+
+   <div >
+  <label class="resumeUpload" for="resumeUpload">Upload Resume</label> <br>
+  <div class="file-drop-area" id="dropArea">
+    <input type="file" id="resumeUpload" name="resume" accept=".pdf,.doc,.docx" />
+    <div class="file-drop-text">
+      <img src="./img/cloud.jpg" alt="Upload Icon" class="upload-icon" />
+     <br>
+      <strong>Browse Files</strong>
+      <p>Drag and drop files here</p>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+  <div class="btn">
+        <button type="submit"  id="submitBtn">Submit</button>
+      </div>
+    </form>
+    
+    <!-- Thank You message box -->
+<div id="thankYouBox" style="display:none; text-align:center; padding: 30px;">
+  <img src="./img/Thankyou-icon.png" alt="Success" width="80" />
+  <h2>Thank You!</h2>
+  <p>Your submission has been received.</p>
+</div>
+  </div>
+
+
+</body>
+
+
+<script>
+  const dropArea = document.getElementById("dropArea");
+  const fileInput = document.getElementById("resumeUpload");
+
+  ['dragenter', 'dragover'].forEach(evt => {
+    dropArea.addEventListener(evt, e => {
+      e.preventDefault();
+      e.stopPropagation();
+      dropArea.style.borderColor = '#333';
+    }, false);
+  });
+
+  ['dragleave', 'drop'].forEach(evt => {
+    dropArea.addEventListener(evt, e => {
+      e.preventDefault();
+      e.stopPropagation();
+      dropArea.style.borderColor = '#ccc';
+    }, false);
+  });
+
+  dropArea.addEventListener('drop', e => {
+    fileInput.files = e.dataTransfer.files;
+  });
+
+
+  const form = document.getElementById('applicationForm');
+  const submitBtn = document.getElementById('submitBtn');
+  const thankYouBox = document.getElementById('thankYouBox');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Change button text and disable it
+    submitBtn.innerText = "Please wait...";
+    submitBtn.disabled = true;
+
+    // Simulate delay for submission
+    setTimeout(() => {
+      // Hide form
+      form.style.display = "none";
+
+      // Show Thank You box
+      thankYouBox.style.display = "block";
+    }, 2000); // 2 seconds
+  });
+
+
+</script>
+</html>
